@@ -5,7 +5,7 @@ env:
   global:
     - PROJECT_NAME: SOOS_DAST_TravisCI_Example
     - SCAN_MODE: baseline
-    - TARGET_URL: https://app.soos.io/
+    - TARGET_URL: https://api.soos.io/api/
 
 script:
   - docker run soosio/dast
