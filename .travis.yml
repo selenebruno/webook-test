@@ -11,6 +11,6 @@ script:
   - docker run soosio/dast
                     --clientId=SOOS_CLIENT_ID
                     --apiKey=SOOS_API_KEY 
-                    --projectName=PROJECT_NAME
-                    --scanMode=SCAN_MODE
-                    TARGET_URL
+                    --projectName=SOOS_DAST_TravisCI_Example
+                    --scanMode=baseline
+                    https://api.soos.io/api/
