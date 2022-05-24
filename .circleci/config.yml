@@ -2,7 +2,7 @@
 version: 2.1
 
 orbs: 
-  sca: soos-io/sca@1.0.9
+  soos: soos-io/sca@1.0.9
 
 workflows:
   main:
@@ -10,4 +10,4 @@ workflows:
       - soos/analysis_run_and_wait:
           client_id: ${SOOS_CLIENT_ID}
           api_key: ${SOOS_API_KEY}
-          project_name: "selene-circleci-sca"
+          project_name: "<<selene-circleci-sca>>"
