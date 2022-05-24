@@ -1,13 +1,15 @@
-
-version: 2.1
-
-orbs: 
-  sca: soos-io/sca@1.0.9
-
+version: '2.1'
+orbs:
+  soos: soos-io/sca@X.Y.Z
 workflows:
   main:
     jobs:
-      - soos/analysis_run_and_wait:
+      - soos/analysis_async_init:
           client_id: ${SOOS_CLIENT_ID}
           api_key: ${SOOS_API_KEY}
+      - soos/analysis_async_result:
+           client_id: ${SOOS_CLIENT_ID}
+          api_key: ${SOOS_API_KEY}
+          requires:
+            - soos/analysis_async_init
           project_name: "selene-circleci-sca"
