@@ -5,11 +5,11 @@ workflows:
   main:
     jobs:
       - soos/analysis_async_init:
-          client_id: <<SOOS Client Id>>
-          api_key: <<SOOS API Key>>
+          client_id: ${SOOS Client Id}
+          api_key: ${SOOS API Key}
       - soos/analysis_async_result:
-          client_id: <<SOOS Client Id>>
-          api_key: <<SOOS API Key>>
+          client_id: ${SOOS Client Id}
+          api_key: ${SOOS API Key}
           requires:
             - soos/analysis_async_init
           project_name: "selene-circleci-sca"
