@@ -1,23 +1,13 @@
+
 version: 2.1
 
 orbs:
-  soos: soos-io/sca@x.y.z
+  soos: soos-io/sca@x.y.z # Get the latest version at https://circleci.com/developer/orbs/orb/soos-io/sca
 
-#
-# The Workflow is the example of how a user would integrate with the PA ORB
-#
 workflows:
   main:
     jobs:
-
-      - soos/analysis_async_init:
-          client_id: "<<SOOS Client Id>>"
-          api_key: "<<SOOS API Key>>"
-
-      - soos/analysis_async_result:
-          client_id: "<<SOOS Client Id>>"
-          api_key: "<<SOOS API Key>>"
-
-          requires:
-           - soos/analysis_async_init
-        
+      - soos/analysis_run_and_wait:
+          client_id: ${SOOS_CLIENT_ID}
+          api_key: ${SOOS_API_KEY}
+          project_name: "selene-circleci-sca"
