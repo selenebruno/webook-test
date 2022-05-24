@@ -1,0 +1,23 @@
+version: 2.1
+
+orbs:
+  soos: soos-io/sca@x.y.z
+
+#
+# The Workflow is the example of how a user would integrate with the PA ORB
+#
+workflows:
+  main:
+    jobs:
+
+      - soos/analysis_async_init:
+          client_id: "<<SOOS Client Id>>"
+          api_key: "<<SOOS API Key>>"
+
+      - soos/analysis_async_result:
+          client_id: "<<SOOS Client Id>>"
+          api_key: "<<SOOS API Key>>"
+
+          requires:
+           - soos/analysis_async_init
+        
