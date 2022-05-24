@@ -1,8 +1,8 @@
 
 version: 2.1
 
-orbs:
-  soos: soos-io/sca@x.y.z # Get the latest version at https://circleci.com/developer/orbs/orb/soos-io/sca
+orbs: 
+  sca: soos-io/sca@1.0.9
 
 workflows:
   main:
