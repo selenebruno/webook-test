@@ -1,6 +1,6 @@
 version: '2.1'
-orbs:
-  soos: soos-io/sca@X.Y.Z
+orbs: 
+  sca: soos-io/sca@1.0.9
 workflows:
   main:
     jobs:
